@@ -1,4 +1,4 @@
-# Algorithm K Nearest Neighbors
+# Algorithm k-Nearest Neighbors
 # UDESC - Pattern Recognition project
 
 import csv
@@ -54,16 +54,21 @@ def getResponse(neighbors):
 
 def getAccuracy(testSet, predictions):
     correct = 0
+    wrong = 0
     for x in range(len(testSet)):
         if testSet[x][-1] == predictions[x]:
             correct += 1
+        else:
+            wrong += 1
+    print 'Correct: ' + repr(correct)
+    print 'Wrong: ' + repr(wrong)
     return (correct/float(len(testSet))) * 100.0
 
 def main():
     # Prepare data
     trainingSet=[]
     testSet=[]
-    split = 0.67
+    split = 0.50
     loadDataset('../data/iris.data', split, trainingSet, testSet)
     print 'Train set: ' + repr(len(trainingSet))
     print 'Test set: ' + repr(len(testSet))
@@ -74,7 +79,7 @@ def main():
         neighbors = getNeighbors(trainingSet, testSet[x], k)
         result = getResponse(neighbors)
         predictions.append(result)
-        print('Predicted=' + repr(result) + ' > Actual=' + repr(testSet[x][-1]))
+        # print('Predicted=' + repr(result) + ' > Actual=' + repr(testSet[x][-1]))
     accuracy = getAccuracy(testSet, predictions)
     print('Accuracy: ' + repr(accuracy) + '%')
 
