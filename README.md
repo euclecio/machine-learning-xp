@@ -2,4 +2,4 @@
 
 My Machine Learning algorithms experiments
 
-- [k-Nearest Neighbors](https://github.com/euclecio/machine-learning-xp/tree/master/k-nearest-neighbors)
+- [k-Nearest Neighbors](/k-nearest-neighbors/knn.py)
