@@ -7,7 +7,7 @@ import math
 import operator
 
 def loadDataset(filename, split, trainingSet=[] , testSet=[]):
-    with open(filename, 'rb') as csvfile:
+    with open(filename, 'r') as csvfile:
         lines = csv.reader(csvfile)
         dataset = list(lines)
         for x in range(len(dataset)):
@@ -49,7 +49,7 @@ def getResponse(neighbors):
         else:
             classVotes[response] = 1
     # Sort by desc most voted neighbors
-    sortedVotes = sorted(classVotes.iteritems(), key=operator.itemgetter(1), reverse=True)
+    sortedVotes = sorted(classVotes.items(), key=operator.itemgetter(1), reverse=True)
     return sortedVotes[0][0]
 
 def getAccuracy(testSet, predictions):
@@ -60,8 +60,9 @@ def getAccuracy(testSet, predictions):
             correct += 1
         else:
             wrong += 1
-    print 'Correct: ' + repr(correct)
-    print 'Wrong: ' + repr(wrong)
+
+    print('Correct: ' + repr(correct))
+    print('Wrong: ' + repr(wrong))
     return (correct/float(len(testSet))) * 100.0
 
 def main():
@@ -70,8 +71,8 @@ def main():
     testSet=[]
     split = 0.50
     loadDataset('../data/iris.data', split, trainingSet, testSet)
-    print 'Train set: ' + repr(len(trainingSet))
-    print 'Test set: ' + repr(len(testSet))
+    print('Train set: ' + repr(len(trainingSet)))
+    print('Test set: ' + repr(len(testSet)))
     # Generate predictions
     predictions=[]
     k = 3
@@ -79,7 +80,7 @@ def main():
         neighbors = getNeighbors(trainingSet, testSet[x], k)
         result = getResponse(neighbors)
         predictions.append(result)
-        # print('Predicted=' + repr(result) + ' > Actual=' + repr(testSet[x][-1]))
+        print('Predicted=' + repr(result) + ' > Actual=' + repr(testSet[x][-1]))
     accuracy = getAccuracy(testSet, predictions)
     print('Accuracy: ' + repr(accuracy) + '%')
 
