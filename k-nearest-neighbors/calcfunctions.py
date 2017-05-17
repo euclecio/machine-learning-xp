@@ -43,6 +43,10 @@ def getAccuracy(testSet, predictions):
         else:
             wrong += 1
 
-    print('Correct: ' + repr(correct))
-    print('Wrong: ' + repr(wrong))
-    return (correct/float(len(testSet))) * 100.0
+    result = {
+        'correct': correct,
+        'wrong': wrong,
+        'accuracy': (correct/float(len(testSet))) * 100.0
+    }
+
+    return result
