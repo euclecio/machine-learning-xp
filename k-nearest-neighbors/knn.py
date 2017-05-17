@@ -45,6 +45,16 @@ def splitSets(filename, trainingZ1Set=[], validationZ2Set=[], testZ3Set=[]):
             else:
                 validationZ2Set.append(instance)
 
+def exchangeEquivalentInstances(z1TrainingSet, z2ValidationSet, wrongPredictions):
+    for x in wrongPredictions:
+        wrongInstance = z2ValidationSet[x]
+        for key in range(len(z1TrainingSet)):
+            if z1TrainingSet[key][-1] == wrongInstance[-1]:
+                newInstance = z1TrainingSet[key]
+                z1TrainingSet[key] = z2ValidationSet[x]
+                z2ValidationSet[x] = newInstance
+
+
 def main():
     # Prepare data
     z1TrainingSet = []
@@ -55,24 +65,34 @@ def main():
     print('Train set: ' + repr(len(z1TrainingSet)))
     print('Valid set: ' + repr(len(z2ValidationSet)))
     print('Test set: ' + repr(len(z3TestSet)))
+    print('\n')
 
     # Generate predictions
+    k = 4
+    t = len(z1TrainingSet) + len(z2ValidationSet)
+
+    # Improve z1 changing wrongly predicted instances
+    for iteration in range(t):
+        wrongPredictions = []
+        for x in range(len(z2ValidationSet)):
+            neighbors = getNeighbors(z1TrainingSet, z2ValidationSet[x], k)
+            result = getResponse(neighbors)
+
+            # If z2 instance was predicted wrongly, then change by z1 instance with same class
+            if result != z2ValidationSet[x][-1]:
+                wrongPredictions.append(x)
+
+        exchangeEquivalentInstances(z1TrainingSet, z2ValidationSet, wrongPredictions)
+
+    # Now run with train set
     predictions = []
-    k = 3
-    descPrediction = '';
-    for x in range(len(z2ValidationSet)):
-        neighbors = getNeighbors(z1TrainingSet, z2ValidationSet[x], k)
+    for x in range(len(z3TestSet)):
+        neighbors = getNeighbors(z1TrainingSet, z3TestSet[x], k)
         result = getResponse(neighbors)
         predictions.append(result)
 
-        if result != z2ValidationSet[x][-1]:
-            row = "[F] Predicted: %s \n    Actual: %s \n" % (repr(result), repr(z2ValidationSet[x][-1]))
-        else:
-            row = "[T] Predicted: %s \n    Actual: %s \n" % (repr(result), repr(z2ValidationSet[x][-1]))
-
-        descPrediction = descPrediction + row
-    print(descPrediction)
-    accuracy = getAccuracy(z2ValidationSet, predictions)
+    accuracy = getAccuracy(z3TestSet, predictions)
     print('Accuracy: ' + repr(accuracy) + '%')
+    print('\n')
 
 main()
