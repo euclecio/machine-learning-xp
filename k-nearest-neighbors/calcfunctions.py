@@ -1,3 +1,7 @@
+
+import math
+import operator
+
 def euclideanDistance(instance1, instance2, length):
     distance = 0
     for x in range(length):
