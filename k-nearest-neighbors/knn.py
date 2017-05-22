@@ -45,7 +45,7 @@ def run(cont):
     z1TrainingSet = []
     z2ValidationSet = []
     z3TestSet = []
-    splitSets('../data/cmc.data', z1TrainingSet, z2ValidationSet, z3TestSet)
+    splitSets('../data/car-evaluation.data', z1TrainingSet, z2ValidationSet, z3TestSet)
 
     row += '|' + repr(len(z1TrainingSet))
     row += '|' + repr(len(z2ValidationSet))
