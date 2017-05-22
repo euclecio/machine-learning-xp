@@ -2,4 +2,4 @@
 
 My Machine Learning algorithms experiments
 
-- [k-Nearest Neighbors](/k-nearest-neighbors/knn.py)
+- [k-Nearest Neighbors](/k-nearest-neighbors)
