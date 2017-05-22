@@ -51,5 +51,5 @@
 
 Outros resultados:
 - [Iris Data Set](/k-nearest-neighbors/result/iris.md)
-- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
 - [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
+- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)

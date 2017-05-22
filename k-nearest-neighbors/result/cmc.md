@@ -28,5 +28,5 @@
 
 Outros resultados:
 - [Iris Data Set](/k-nearest-neighbors/result/iris.md)
-- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
 - [Wine Data Set](/k-nearest-neighbors/result/wine.md)
+- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)

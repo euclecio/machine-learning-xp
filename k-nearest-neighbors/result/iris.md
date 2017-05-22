@@ -50,6 +50,6 @@
 
 
 Outros resultados:
-- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
 - [Wine Data Set](/k-nearest-neighbors/result/wine.md)
 - [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
+- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
