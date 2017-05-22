@@ -1,3 +1,11 @@
+#Iris Data Set
+
+Outros resultados:
+- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
+- [Wine Data Set](/k-nearest-neighbors/result/wine.md)
+- [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
+
+
 | Nº | Train set | Valid set | Test set | Correct | Wrong | Accuracy |
 |----|-----------|-----------|----------|---------|-------|----------|
 |1|38|38|74|70|4|94.5946%|
@@ -16,3 +24,6 @@
 |14|38|38|74|72|2|97.2973%|
 |15|38|38|74|71|3|95.9459%|
 
+Variância: 6.541710576
+Média: 95.2252
+Desvio Padrão: 2.55767679272

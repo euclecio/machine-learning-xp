@@ -10,6 +10,6 @@ As bases de dados usadas foram encontradas no site http://archive.ics.uci.edu/ml
 
 Resultados:
 - [Iris Data Set](/k-nearest-neighbors/result/iris.md)
-- [Car Evaluation Data Set ](/k-nearest-neighbors/result/car-evaluation.md)
+- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
 - [Wine Data Set](/k-nearest-neighbors/result/wine.md)
 - [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
