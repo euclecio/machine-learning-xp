@@ -11,22 +11,23 @@ from datasetfunctions import splitSets, exchangeEquivalentInstances
 def getBestZ1(k, t, z1TrainingSet, z2ValidationSet):
     z1List = []
     for iteration in range(t):
-        predictions = []
-        wrongPredictions = []
-        for x in range(len(z2ValidationSet)):
-            neighbors = getNeighbors(z1TrainingSet, z2ValidationSet[x], k)
-            result = getResponse(neighbors)
-            predictions.append(result)
+        for k in range(3, 14):
+            predictions = []
+            wrongPredictions = []
+            for x in range(len(z2ValidationSet)):
+                neighbors = getNeighbors(z1TrainingSet, z2ValidationSet[x], k)
+                result = getResponse(neighbors)
+                predictions.append(result)
 
-            if result != z2ValidationSet[x][-1]:
-                wrongPredictions.append(x)
+                if result != z2ValidationSet[x][-1]:
+                    wrongPredictions.append(x)
 
-        result = getAccuracy(z2ValidationSet, predictions)
-        newZ1 = {
-            'dataset': z1TrainingSet,
-            'accuracy': result['accuracy']
-        }
-        z1List.append(newZ1)
+            result = getAccuracy(z2ValidationSet, predictions)
+            newZ1 = {
+                'dataset': z1TrainingSet,
+                'accuracy': result['accuracy']
+            }
+            z1List.append(newZ1)
         # If z2 instance was predicted wrongly, then change by z1 instance with same class
         exchangeEquivalentInstances(z1TrainingSet, z2ValidationSet, wrongPredictions)
 
@@ -44,7 +45,7 @@ def run(cont):
     z1TrainingSet = []
     z2ValidationSet = []
     z3TestSet = []
-    splitSets('../data/iris.data', z1TrainingSet, z2ValidationSet, z3TestSet)
+    splitSets('../data/cmc.data', z1TrainingSet, z2ValidationSet, z3TestSet)
 
     row += '|' + repr(len(z1TrainingSet))
     row += '|' + repr(len(z2ValidationSet))

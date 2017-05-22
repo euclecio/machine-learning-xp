@@ -1,10 +1,6 @@
 # Wine Data Set
 
-Resultados:
-- [Iris Data Set](/k-nearest-neighbors/result/iris.md)
-- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
-- [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
-
+## Método 1
 
 | Nº | Train set | Valid set | Test set | Correct | Wrong | Accuracy |
 |----|-----------|-----------|----------|---------|-------|----------|
@@ -24,6 +20,36 @@ Resultados:
 |14|54|54|70|41|29|58.5714%|
 |15|54|54|70|42|28|60.0%|
 
-### Variância: 14.5486985949
-### Média: 61.33332
-### Desvio Padrão: 3.81427563175
+#### Variância: 14.5486985949
+#### Média: 61.33332
+#### Desvio Padrão: 3.81427563175
+
+## Método 2
+
+| Nº | Train set | Valid set | Test set | Correct | Wrong | Accuracy |
+|----|-----------|-----------|----------|---------|-------|----------|
+|1|45|45|88|50|38|56.8182%|
+|2|45|45|88|70|18|79.5455%|
+|3|37|37|104|73|31|70.1923%|
+|4|45|45|88|60|28|68.1818%|
+|5|45|45|88|54|34|61.3636%|
+|6|45|45|88|46|42|52.2727%|
+|7|54|54|70|46|24|65.7143%|
+|8|54|54|70|43|27|61.4286%|
+|9|54|54|70|44|26|62.8571%|
+|10|54|54|70|45|25|64.2857%|
+|11|37|37|104|71|33|68.2692%|
+|12|37|37|104|69|35|66.3462%|
+|13|37|37|104|65|39|62.5%|
+|14|45|45|88|59|29|67.0455%|
+|15|45|45|88|64|24|72.7273%|
+
+#### Variância: 39.3625596427
+#### Média: 65.3032
+#### Desvio Padrão: 6.2739588493
+
+
+Outros resultados:
+- [Iris Data Set](/k-nearest-neighbors/result/iris.md)
+- [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
+- [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
