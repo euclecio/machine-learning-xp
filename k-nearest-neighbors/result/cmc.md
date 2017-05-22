@@ -1,4 +1,4 @@
-#Contraceptive Method Choice Data Set
+# Contraceptive Method Choice Data Set
 
 Outros resultados:
 - [Iris Data Set](/k-nearest-neighbors/result/iris.md)
@@ -24,6 +24,6 @@ Outros resultados:
 |14|256|256|961|335|626|34.8595%|
 |15|256|256|961|343|618|35.692%|
 
-Variância: 0.539202180622
-Média: 34.9913266667
-Desvio Padrão: 0.734303874852
+### Variância: 0.539202180622
+### Média: 34.9913266667
+### Desvio Padrão: 0.734303874852

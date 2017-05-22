@@ -1,4 +1,4 @@
-#Iris Data Set
+# Iris Data Set
 
 Outros resultados:
 - [Car Evaluation Data Set](/k-nearest-neighbors/result/car-evaluation.md)
@@ -24,6 +24,6 @@ Outros resultados:
 |14|38|38|74|72|2|97.2973%|
 |15|38|38|74|71|3|95.9459%|
 
-Variância: 6.541710576
-Média: 95.2252
-Desvio Padrão: 2.55767679272
+### Variância: 6.541710576
+### Média: 95.2252
+### Desvio Padrão: 2.55767679272

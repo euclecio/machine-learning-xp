@@ -1,4 +1,4 @@
-#Wine Data Set
+# Wine Data Set
 
 Resultados:
 - [Iris Data Set](/k-nearest-neighbors/result/iris.md)
@@ -24,6 +24,6 @@ Resultados:
 |14|54|54|70|41|29|58.5714%|
 |15|54|54|70|42|28|60.0%|
 
-Variância: 14.5486985949
-Média: 61.33332
-Desvio Padrão: 3.81427563175
+### Variância: 14.5486985949
+### Média: 61.33332
+### Desvio Padrão: 3.81427563175
