@@ -9,7 +9,7 @@ De cada classes são 25% para treino, 25% para validação e 50% para teste.
 As bases de dados usadas foram encontradas no site (http://archive.ics.uci.edu/ml/) e alguns dados foram adaptados para serem processados pelo algoritmo.
 
 Resultados:
-- [Iris Data Set](/result/iris.md)
-- [Car Evaluation Data Set ](/result/car-evaluation.md)
-- [Wine Data Set](/result/wine.md)
-- [Contraceptive Method Choice Data Set](/result/cmc.md)
+- [Iris Data Set](/k-nearest-neighbors/result/iris.md)
+- [Car Evaluation Data Set ](/k-nearest-neighbors/result/car-evaluation.md)
+- [Wine Data Set](/k-nearest-neighbors/result/wine.md)
+- [Contraceptive Method Choice Data Set](/k-nearest-neighbors/result/cmc.md)
